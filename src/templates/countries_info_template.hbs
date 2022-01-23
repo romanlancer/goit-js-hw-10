@@ -7,6 +7,7 @@
     <p class='item'>Capital: <span class='value'>{{capital}}</span></p>
     <p class='item'>Population: <span class='value'>{{population}}</span></p>
     <p class='item'>Languages:
-      {{#each languages}}<span class='value'>({{this}})</span>{{/each}}</p>
+      <span class='value'>{{#each languages}}{{#if @last}}{{this}}{{else}}{{this}},{{/if}}
+        {{/each}}</span></p>
   </article>
 {{/each}}
