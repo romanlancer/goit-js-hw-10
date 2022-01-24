@@ -9,14 +9,17 @@ const searchInput = document.querySelector('#search-box');
 const countriesList = document.querySelector('.country-list');
 const countriesInfo = document.querySelector('.country-info');
 const DEBOUNCE_DELAY = 300;
-let name = '';
+
 searchInput.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
+searchInput.focus();
 
 Notiflix.Notify.init({
   position: 'center-top',
   width: '400px',
   fontSize: '18px',
 });
+
+let name = '';
 
 function onSearch(e) {
   name = e.target.value.trim();

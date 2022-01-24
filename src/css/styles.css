@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
@@ -15,8 +21,18 @@ body {
 #search-box {
   font: inherit;
   padding: 8px;
-  max-width: 320px;
+  max-width: 400px;
   margin-bottom: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-top: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+#search-box:hover,
+#search-box:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
 }
 
 .wrapper {
@@ -48,4 +64,20 @@ body {
 
 .flag {
   margin-right: 30px;
+}
+
+.card {
+  background: #ffffff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 16px 16px 16px 16px;
+  width: 40%;
+  padding: 40px;
+  display: block;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
